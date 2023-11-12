@@ -136,6 +136,58 @@ html {
   letter-spacing: 0.1rem;
 }
 
+.carousel {
+  max-width: 50%;
+  margin: 2rem auto;
+
+  position: relative;
+}
+
+.carousel img {
+  width: 100%;
+  border-radius: 10px;
+}
+
+.carousel .carousel__item,
+.carousel .carousel__item--hidden {
+  display: none;
+}
+
+.carousel .carousel__item--visible {
+  display: block;
+  animation: fadeIn 0.2s;
+}
+
+@keyframes fadeIn {
+  0% {
+    opacity: 0.5;
+  }
+  100% {
+    opacity: 1;
+  }
+}
+
+.carousel .carousel__actions {
+  display: flex;
+  justify-content: space-between;
+  width: 100%;
+  position: absolute;
+  top: 50%;
+  transform: translateY(-50%);
+}
+
+.carousel .carousel__actions button {
+  border-radius: 50px;
+  font-weight: bold;
+  cursor: pointer;
+  height: 50px;
+  width: 50px;
+  border: none;
+  background-color: #ffffff88;
+  font-size: 2rem;
+  margin: 1rem;
+}
+
 .movie-info-actions {
   font-size: 1.1rem;
 }
@@ -183,7 +235,7 @@ html {
 }
 
 footer {
-  margin-top: 10rem;
+  margin-top: 33rem;
   text-align: center;
   color: #777;
 }
